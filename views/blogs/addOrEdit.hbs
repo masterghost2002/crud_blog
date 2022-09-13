@@ -1,0 +1,38 @@
+<div class="container d-flex p-2 justify-content-between" style="background-color: white; width:100%;">
+    <span class="fs-3 fw-bolder">Monkey-Blogs</span>
+    <a href="/monkeyblogs" class="btn btn-dark"><i class='bx bxl-blogger'>View All Blogs</i> </a>
+</div>
+<div class="row mb-1">
+    <div class="col-md-6 offset-md-3 __addOrEdit">
+        <h3>{{viewTitle}}</h3>
+        <form action="/addBlog" method="post" class="blog_form">
+            <input type="hidden" name="_id" value="{{Blog.id}}" placeholder="">
+            <div class="input-group mb-2">
+                <span class="input-group-text" id="inputGroup-sizing-default">Title</span>
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default" placeholder="Title" value="{{Blog.title}}"
+                    name="title">
+            </div>
+             <div class="input-group mb-2">
+                <span class="input-group-text" id="inputGroup-sizing-default">Author</span>
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default" placeholder="author" value="{{Blog.author}}"
+                    name="author">
+            </div>
+            <div class="input-group mb-2">
+                <span class="input-group-text" id="inputGroup-sizing-default">UserName</span>
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default"placeholder="userName" value="{{Blog.userName}}"
+                    name="userName">
+            </div>
+            <div class="form-group">
+                <label for="description" class="form-label fs-4 fw-bold">Description</label>
+                <textarea class="form-control" name="description" id="description" cols="30" rows="5"
+                    placeholder="{{Blog.description}}" value="{{Blog.description}}">{{Blog.description}}</textarea>
+            </div>
+            <div class="form-group m-2">
+                <button class="btn btn-success" type="submit"><i class='bx bx-add-to-queue'>{{btn}}</i></button>
+            </div>
+        </form>
+    </div>
+</div>
